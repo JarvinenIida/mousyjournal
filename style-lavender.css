@@ -33,12 +33,21 @@ body {
     background-color: #d0b4ff;
 }
 
-.bgimage {
-    position: absolute; 
-    height: 230vh; 
+.bgcontainer {
+  position: absolute; 
+    width: 100vw;
     z-index: -1; 
     width: auto;
     top: -10px;
+}
+
+.bgimage {
+    position: absolute; 
+    width: 100vw;
+    z-index: -1; 
+    width: auto;
+    top: -10px;
+    width: 100vw;
 }
 /* UNIVERSAL FONTS */
 
@@ -94,7 +103,6 @@ nav li a {
 }
 
 .journal-container{
-    background-color: #b699f1;
     margin: 30px auto 100px;
     padding: 40px 40px 40px 40px;
     border-radius: 20px;
@@ -196,7 +204,6 @@ nav li a {
 }
 
 .clear-calendar {
-  width: fit-content;
   margin-left: 10px;
   width: 70px;
   height: 50px;
@@ -576,4 +583,41 @@ input[type="text"]:focus {
 
 .flame {
   background-image: url("../images/flamelavender.svg");
+}
+
+
+@media only screen and (max-width: 1020px) {
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bgimage {
+    overflow-x: hidden;
+  }
+
+  .journal-container {
+    max-width: 600px;
+    padding: 0px;
+  }
+
+  .planner-title {
+    padding-bottom: 30px;
+  }
+
+  .timetable-container {
+    grid-template-columns: 1fr;
+  }
+
+  .timetable {
+    padding-top: 0px;
+  }
+
+  .self-care {
+    grid-template-columns: 1fr;
+  }
+
 }
