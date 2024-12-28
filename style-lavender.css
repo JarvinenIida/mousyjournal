@@ -1,0 +1,579 @@
+@charset "utf-8";
+*{
+html {
+        box-sizing: border-box;
+        
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    } 
+
+    image-rendering: pixelated;
+}
+
+
+/* UNIVERSAL COLORS */
+
+h3, h4, .calendar-container, .hour, .half-hour, .exercise-type, button, p, .calendar-container, .meal-input {
+  color: #dbcaff;
+}
+
+nav li {
+    color: #ebe1ff
+}
+
+.daily-planner, .self-care-checklist, .todays-meals, .exercise, .summary, .water-intake, .calendar-bg {
+  background-color: #9674ff;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 20px 20px 20px;
+}
+
+body {
+    background-color: #d0b4ff;
+}
+
+.bgimage {
+    position: absolute; 
+    height: 230vh; 
+    z-index: -1; 
+    width: auto;
+    top: -10px;
+}
+/* UNIVERSAL FONTS */
+
+h3, h4, .calendar-container, nav li {
+    font-family: "Comfortaa", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.hour, .half-hour, input[type="text"], .exercise-type, .errand, .meal-input {
+    font-family: "Comfortaa", serif;
+    font-weight: 400;
+}
+
+p,  button{
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  padding: 0px 0px 10px 0px;
+}
+
+
+/* HOVER ON BUTTONS */
+
+.transition {
+  transition: background-color 300ms ease-in-out;
+}
+
+.hover:hover {
+  background-color: #6740ff;
+}
+
+header {
+    margin: 20px;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+}
+
+nav li a {
+  cursor: pointer;
+}
+
+.journal-container{
+    background-color: #b699f1;
+    margin: 30px auto 100px;
+    padding: 40px 40px 40px 40px;
+    border-radius: 20px;
+  }
+
+  .journal-container {
+    max-width: 1150px;
+  }
+
+  .collapse {
+    display: grid;
+  }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 5fr 3fr 3fr ;
+    grid-gap: 30px;
+  }
+
+
+.weekday {
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.date {
+    padding: 5px 0px 0px 20px;
+}
+
+.daily-planner {
+    border-radius: 10px;
+    padding: 40px 50px 40px 40px; 
+}
+
+.timetable-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px
+}
+
+.timetable {
+  display: grid;
+  grid-template-columns: 55px 6fr;
+  padding-top: 20px;
+}
+
+.hour, .half-hour {
+    text-align: right;
+}
+
+.first-time-block {
+  border-top: 0.5px solid #dbcaff;
+  z-index: 1;
+  
+}
+
+.rnd {
+  border-radius: 8px;
+  background-color: #7840fc;
+  border: none;
+}
+
+.rnd-top {
+    border-radius: 8px 8px 0px 0px;
+    background-color: #7840fc;
+    border: none;
+}
+
+.rnd-bottom {
+    border-radius: 0px 0px 8px 8px;
+    background-color: #7840fc;
+    border: none;
+}
+
+.rnd-none {
+    background-color: #7840fc;
+    border: none;
+}
+
+.border-bottom {
+  border-bottom: 0.5px solid #dbcaff;
+  z-index: 1;
+}
+
+.time-block {
+    transform: translateY(15%);
+    height: 50px;
+    margin-left: 10px;
+    cursor: text;
+    z-index: 1;
+}
+
+.errand {
+  padding: 15px 10px 10px 10px; 
+  color: #e6bfff;
+  font-size: 0.9rem; 
+  z-index: 100;
+  width: 370px;
+}
+
+.clear-calendar {
+  width: fit-content;
+  margin-left: 10px;
+  width: 70px;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* SELF-CARE */
+
+.self-care {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+.self-care-columns {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  
+}
+
+.daily, .weekly {
+    align-self: first baseline;
+
+}
+
+.weekly {
+    padding-left: 20px;
+}
+
+.daily p, .weekly p {
+    display: inline-block;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.checked {
+  background-color: #7840fc;
+  border: 1px solid #dbcaff;
+}
+
+.unchecked {
+  border: 1px solid #dbcaff;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    transform: translateY(20%);
+    cursor: pointer;
+}
+
+.smiley {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-left: 5px;
+  transform: translateY(25%);
+}
+
+.clear-checklist {
+  margin-top: 40px;
+  width: 70px;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+/* MEALS */
+
+
+.todays-meals {
+    display: flex;
+    min-height: 700px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.todays-meals input[type="text"], .exercise input[type="text"] {
+    background-color: #dbcaff;
+    border: none;
+    padding: 8px;
+    margin: 5px 0px 0px 0px;
+    border-radius: 5px;
+    color: #7840fc;
+    font-size: 0.7rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.weight {
+  width: 85px;
+}
+
+.food {
+  width: 130px;
+}
+
+.calories {
+  width: 95px;
+}
+
+.protein {
+  width: 77px;
+}
+
+.meal-container {
+  display: grid;
+  grid-template-columns: 90px 205px 105px 80px;
+}
+
+.meal-input {
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+
+.delete {
+  transform: translateY(2px);
+  background-color: #7840fc;
+  padding: 3px 6px 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-item, .new-exercise-item {
+  background-color: #7840fc;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-meals {
+  margin-top: 40px;
+  width: 70px;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Water intake */
+
+
+.bottle-container {
+    display: flex;
+    flex-direction: row;
+}
+  
+
+.bottle {
+    margin: 10px 10px 10px 0px;
+    width: 50px;
+    height: 150px;
+    background-color: #7840fc;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.empty-bottle {
+  height: 300px;
+  position: relative;
+  transition: left top 1s;
+  top: -7%;
+  left: 30%;
+}
+
+.full-bottle
+ {
+  height: 300px;
+  position: relative;
+  transition: left top 1s;
+  top: -90%;
+  left:-177%;
+}
+
+.fill-water {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.flush-water {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wave {
+  from {
+    top: -7%;
+    left: 30%;
+  }
+  to {
+    top: -90%;
+    left:-177%;
+  }
+}
+
+.halfliter {
+  position: relative;
+  top: -150%;
+  text-align: center;
+  color: #7840fc;
+  font-weight: 600;
+  user-select: none;
+}
+
+.clear-water {
+  margin-top: 20px;
+  width: 70px;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* EXERCISE */
+
+.exercise {
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.sets, .reps, .weight, .distance, .duration, .burned-calories {
+  width: 70px;
+}
+
+.exercise-item {
+  width: 150px;
+}
+
+.clear-exercises {
+  margin-top: 40px;
+  width: 70px;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+/* SUMMARY */
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.result {
+  padding: 0px 0px 8px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.result-icon {
+  height: 20px;
+  display: inline-block;
+  
+}
+
+.result-text {
+  display: inline-block;
+}
+
+
+.individual-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #7840fc;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.inner-circle {
+  background-color: #dbcaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+}
+
+.large-icon {
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  white-space: nowrap;
+  height: 88px;
+  width: 80px;
+  animation: fade-in ease-in-out 3s infinite alternate;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.individual-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #7840fc;
+}
+
+.calculate-summary {
+  width: fit-content;
+  height: 50px;
+  background-color: #7840fc;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+.apple {
+  background-image: url("../images/applelavender.svg");
+}
+
+.dna {
+  background-image: url("../images/proteinlavender.svg");
+}
+
+.water {
+  background-image: url("../images/waterlavender.svg");
+}
+
+.flame {
+  background-image: url("../images/flamelavender.svg");
+}

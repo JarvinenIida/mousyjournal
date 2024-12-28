@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="450mm"
+   viewBox="0 0 210 450"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="wave.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#dbcaff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       d="m 0,264.35036 c 15.963504,-0.59124 22.752668,-12.5304 51.437955,-18.32846 26.088361,-5.27315 42.441723,10.52891 73.664235,8.27737 50.65286,-3.6527 46.18136,-37.32072 84.89781,-27.59124 V 450 H 0 V 264.35036"
+       id="path1"
+       sodipodi:nodetypes="csscccc"
+       inkscape:export-filename="wave.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
